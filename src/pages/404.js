@@ -1,5 +1,6 @@
 import React from "react";
-import { Link } from "gatsby";
+import AniLink from "gatsby-plugin-transition-link/AniLink";
+// import { Link } from "gatsby";
 
 import Layout from "./../components/Layout";
 import styles from "../css/error.module.css";
@@ -10,9 +11,9 @@ const error = () => {
     <Layout>
       <header className={styles.error}>
         <Banner title="oop's its a dead end">
-          <Link className="btn-white" to="/">
+          <AniLink fade className="btn-white" to="/">
             back to home page
-          </Link>
+          </AniLink>
         </Banner>
       </header>
     </Layout>
