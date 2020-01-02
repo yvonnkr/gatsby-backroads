@@ -1,25 +1,42 @@
 .day {
   margin: 2rem 0;
 }
+
 .day h4 {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+
 .btn {
   background: transparent;
   border: none;
   cursor: pointer;
   outline: none;
 }
+
 .btn svg {
   font-size: 1.5rem;
   color: var(--primaryColor);
 }
-.day p {
+
+/* .day p {
   line-height: 2;
   transition: var(--mainTransition);
+} */
+
+.info {
+  transition: var(--mainTransition);
+  height: 0;
+  overflow: hidden;
 }
+
+.show-info {
+  transition: var(--mainTransition);
+  height: 100px;
+  line-height: 2;
+}
+
 @media screen and (min-width: 992px) {
   .day h4 {
     width: 400px;

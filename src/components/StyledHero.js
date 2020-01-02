@@ -1,10 +1,29 @@
 import React from "react";
 import BackgroundImage from "gatsby-background-image";
 import styled from "styled-components";
+import { useStaticQuery, graphql } from "gatsby";
+
+//alternative if img prop not set
+const getDefaultImg = graphql`
+  query {
+    file(relativePath: { eq: "defaultBcg.jpeg" }) {
+      childImageSharp {
+        fluid(quality: 90, maxWidth: 4160) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+  }
+`;
 
 const StyledHero = ({ img, className, children, home }) => {
+  const response = useStaticQuery(getDefaultImg);
+  const defaultImg = response.file.childImageSharp.fluid;
+
+  let displayImg = img ? img : defaultImg;
+
   return (
-    <BackgroundImage className={className} fluid={img} home={home}>
+    <BackgroundImage className={className} fluid={displayImg} home={home}>
       {children}
     </BackgroundImage>
   );
