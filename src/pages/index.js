@@ -9,9 +9,11 @@ import Services from "./../components/Home/Services";
 // import SimpleHero from "./../components/SimpleHero";
 import StyledHero from "../components/StyledHero";
 import FeaturedTours from "./../components/Home/FeaturedTours";
+import SEO from "../components/SEO";
 
 export default ({ data }) => (
   <Layout>
+    <SEO title="Home" />
     <StyledHero img={data.defaultBcg.childImageSharp.fluid} home={true}>
       <Banner
         title="continue exploring"

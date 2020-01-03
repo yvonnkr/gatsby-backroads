@@ -7,8 +7,12 @@ module.exports = {
     title: `Backroads`,
     description: `Explore awesome worldwide tours & discover what makes them unique. Forget your daily routine and say yes to adventure`,
     author: `@yvonnkr`,
+    twitterUsename: "@NkrYvonne",
+    image: "/defaultBcg.jpeg",
+    siteUrl: "https://yvonnkr-gatsby-backroads.netlify.com",
   },
   plugins: [
+    `gatsby-plugin-react-helmet`,
     "gatsby-plugin-styled-components",
     "gatsby-plugin-playground",
     {
