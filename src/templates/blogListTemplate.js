@@ -6,6 +6,7 @@ import Layout from "./../components/Layout";
 import styles from "../css/blog.module.css";
 import BlogCard from "./../components/Blog/BlogCard";
 import Title from "../components/Title";
+import SEO from "../components/SEO";
 
 const blogListTemplate = ({ data, pageContext }) => {
   const { numOfPages, currentPage } = pageContext;
@@ -19,6 +20,7 @@ const blogListTemplate = ({ data, pageContext }) => {
 
   return (
     <Layout>
+      <SEO title="Blogs" />
       <section className={styles.blog}>
         <Title title="latest" subtitle="posts" />
 
